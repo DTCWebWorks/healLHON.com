@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>healLHON.com - Supplements</title>
+    <link rel="stylesheet" href="styles_v10.css?v=21" />
+  <style>
+  /* Supplements page: top two cards side-by-side */
+  .supp-top-grid {
+    display: flex;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 18px;
+    flex-wrap: nowrap;
+  }
+  .supp-top-grid > .card {
+    flex: 1 1 0;
+    min-width: 0; /* allow text wrapping instead of forcing overflow */
+  }
+  /* On small screens, stack them */
+  @media (max-width: 900px) {
+    .supp-top-grid {
+      flex-wrap: wrap;
+    }
+    .supp-top-grid > .card {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+<style>
+  /* Supplements page: top two cards side-by-side */
+  .supp-top-grid {
+    display: flex;
+    gap: 18px;
+    align-items: stretch;
+    margin-top: 18px;    /* space below header/banner */
+    margin-bottom: 18px;
+    flex-wrap: nowrap;
+  }
+  .supp-top-grid > .card {
+    flex: 1 1 0;
+    min-width: 0; /* allow text wrapping instead of forcing overflow */
+  }
+
+  /* Stack Includes: 4-column list */
+  .stack-cols {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px 28px;
+  }
+  .stack-cols ul {
+    margin: 0;
+    padding-left: 24px;
+    list-style: disc;
+  }
+  .stack-cols li { margin: 0 0 8px 0; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .supp-top-grid { flex-wrap: wrap; }
+    .supp-top-grid > .card { flex: 1 1 100%; }
+    .stack-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 560px) {
+    .stack-cols { grid-template-columns: 1fr; }
+  }
+</style>
+
+<style>
+  .supp-stack-card {
+    margin-bottom: 8px !important;
+  }
+
+  .supp-banner-card {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 8px 0 !important;
+    overflow: visible;
+  }
+
+  .supp-banner-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+  }
+
+  .supplements-grid-card {
+    margin-top: 0 !important;
+  }
+</style>
+
+</head>
+
+  <body>
+    <header class="fixed-header" role="banner">
+  <div class="header-grid">
+    <div class="header-left-controls">
+      <div class="visit-counter" aria-label="Site visits counter">
+        <div class="visit-counter-label">Visits</div>
+        <div class="visit-counter-number">420</div>
+      </div>
+
+      <div class="text-size-control">
+        <label for="textSizeSelect" class="text-size-label">Text Size</label>
+        <select id="textSizeSelect" class="text-size-select" aria-label="Select text size for the whole site">
+          <option value="normal">Normal</option>
+          <option value="large">Large</option>
+          <option value="xlarge">Extra Large</option>
+          <option value="huge">Huge</option>
+          <option value="maximum">Maximum</option>
+        </select>
+      </div>
+    </div>
+<!-- LEFT LOGO -->
+    <a class="logo-link" href="index.html?play=lhon" data-play="lhon" aria-label="Go to home and play LHON">
+      <img class="logo" src="Images/800 LHON TRANSPARENT BACKGROUND.png" alt="LHON logo" />
+    </a>
+
+    <!-- CENTER TITLE -->
+    <a class="center-title" href="index.html" aria-label="Go to home">healLHON.com</a>
+
+    <!-- RIGHT CLUSTER: LHON+ + TOGGLE + LANGUAGE PLACEHOLDER -->
+
+
+    <div class="header-right">
+
+
+      <a class="logo-link" href="index.html?play=lhonplus" data-play="lhonplus" aria-label="Go to home and play LHON Plus">
+
+
+        <img class="logo" src="Images/LHON+ TRANSPARENT BACKGROUND.png" alt="LHON Plus logo" />
+
+
+      </a>
+
+
+
+      <div class="header-right-controls">
+
+
+        <!-- Toggle: I can see / I am blind -->
+
+
+        <div class="vision-toggle" role="group" aria-label="Vision mode toggle">
+
+
+          <span class="toggle-label" id="labelSee">I can see</span>
+
+
+          <button id="visionToggle" class="toggle-btn" type="button" role="switch" aria-checked="false" aria-labelledby="labelSee labelBlind">
+
+
+            <span class="toggle-knob" aria-hidden="true"></span>
+
+
+          </button>
+
+
+          <span class="toggle-label" id="labelBlind">I am blind</span>
+
+
+        </div>
+
+
+
+        <div class="language-control">
+
+
+          <label for="languageSelect" class="language-label">Language Selection</label>
+
+
+          <select id="languageSelect" class="language-select" aria-label="Language selection placeholder">
+
+
+            <option selected>Coming Soon</option>
+
+
+          </select>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+    </div>
+  </div>
+</header>
+
+    <main class="page-grid" id="main">
+      <nav class="side-nav">
+  <a class="nav-link" href="index.html">Home</a>
+  <a class="nav-link" href="supplements.html">LHON Vision Quest 2.0 Supplements</a>
+  <a class="nav-link" href="papers.html">: LHON Vision Quest 2.0 Papers</a>
+      <a class="nav-link" href="social-lab.html">LHON Vision Quest 2.0 Social Lab</a>
+<a class="nav-link" href="lhon-symbol.html">LHON Symbol</a>
+</nav>
+
+
+      <section class="content">
+
+<div class="supp-top-grid">
+<section class="card">
+          <h3 class="h3">What This List Is</h3>
+          <ul>
+            <li>What I personally take</li>
+            <li>Where I purchase it</li>
+            <li>How it fits into my daily routine</li>
+          </ul>
+          <p>This page documents my personal routine and experience.</p>
+          <p><strong>It is documentation, not direction.</strong></p>
+          <p>Nothing here should be copied blindly.</p>
+          <p>Nothing here should replace medical guidance.</p>
+          <p><strong>Affiliate Disclosure</strong><br>
+            Some links may be affiliate links. If you choose to purchase through them, I may earn a small commission that helps support my Vision Quest journey.
+          </p>
+        </section>
+<section class="card">
+          <h3 class="h3">Vision Quest 2.0 – Core Concept</h3>
+
+          <p><strong>Primary Driver</strong></p>
+          <p><strong>Methylene Blue</strong><br>
+            Supports mitochondrial electron transport and energy production in retinal ganglion cells (RGCs).
+          </p>
+
+          <hr>
+
+          <p><strong>Support Stack</strong></p>
+          <p>A mitochondrial and neuro-support stack designed to:</p>
+          <ul>
+            <li>Increase NAD+ availability</li>
+            <li>Reduce oxidative stress</li>
+            <li>Support neuronal survival</li>
+            <li>Support retinal health</li>
+            <li>Improve mitochondrial efficiency</li>
+          </ul>
+</section>
+</div>
+
+
+        <section class="card supp-stack-card">
+          <h3 class="h3">Stack Includes</h3>
+          <div class="stack-cols">
+            <ul>
+              <li>NMN</li>
+              <li>L-Taurine</li>
+              <li>R-Alpha Lipoic Acid</li>
+              <li>Ubiquinol</li>
+              <li>Apigenin</li>
+            </ul>
+            <ul>
+              <li>Vitamin B12</li>
+              <li>Lutein</li>
+              <li>Lion's Mane</li>
+              <li>Bacopa Monnieri</li>
+              <li>Astaxanthin</li>
+            </ul>
+            <ul>
+              <li>7,8-DHF</li>
+              <li>Nicotinamide</li>
+              <li>CDP Citicoline</li>
+              <li>Huperzine A</li>
+              <li>Resveratrol</li>
+            </ul>
+            <ul>
+              <li>Algae Tablets (50% Chlorella / 50% Spirulina)</li>
+              <li>Cobalt</li>
+              <li>Methylene Blue</li>
+              <li>Red / Infrared Light Therapy</li>
+            </ul>
+          </div>
+        </section>
+
+<section class="supp-banner-card">
+  <img id="secretMsgBanner" src="Images/Hiddeb Msg Banner. PNG" alt="LHON Vision Quest 2.0 full stack system banner" />
+
+  <script>
+    (function () {
+      var img = document.getElementById('secretMsgBanner');
+      if (!img) return;
+
+      var fallbacks = [
+        "Images/Hiddeb Msg Banner.PNG",
+        "Images/Hiddeb Msg Banner.png",
+        "Images/Hidden Msg Banner.PNG",
+        "Images/Hidden Msg Banner.png",
+        "Images/HiddenMsgBanner.PNG",
+        "Images/HiddenMsgBanner.png"
+      ];
+
+      var i = 0;
+      img.onerror = function () {
+        if (i >= fallbacks.length) return;
+        img.src = fallbacks[i++];
+      };
+    })();
+  </script>
+</section>
+
+
+<section class="card supplements-grid-card">
+          <div class="supp-grid">
+            <article class="supp-card">
+              <h3 class="h3">1) Earth Harmony Methylene Blue (99.99%)</h3>
+<h3>My Experience – Methylene Blue (MB): How I Take It</h3>
+<p><strong>Important Safety Note</strong><br>
+Before I started using Methylene Blue, I had to work with my doctor to dose down off of Lexapro, 
+the SSRI antidepressant I was taking. SSRIs and Methylene Blue do not mix well. That combination 
+can cause Serotonin Toxicity (Serotonin Syndrome), which is very dangerous and can be life‑threatening.
+Also, some people have a genetic condition called G6PD deficiency, and Methylene Blue can cause 
+serious problems for them as well. So please do your own research and talk with your doctor before 
+doing anything like this.</p>
+
+<p><strong>How I Take It</strong><br>
+I use the eye dropper that comes with it and drop it directly into my mouth and swallow. I do not 
+mix it with anything. Mixing it with liquids can reduce the effectiveness of the Methylene Blue.
+I take 10 drops per dose, three times per day with my vitamins: Morning, Afternoon, and Night.</p>
+
+<p><strong>The Blue Dye Reality</strong><br>
+MB is a bright blue dye. It will stain things. It can stain your countertop, sink, or toilet. 
+It will also temporarily stain your lips, teeth, and tongue blue until it is absorbed by the body.</p>
+
+<p><strong>Why I Take It</strong><br>
+The reason I take it is because it can help deliver electrons directly to Complex IV in the electron 
+transport chain, and it acts as a very powerful antioxidant right inside the ETC.</p>
+
+              <p class="muted">$54.95</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <p class="muted">Your note: drops directly in mouth, don’t mix. Start low and titrate up.</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4krzCwZ">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">2) NMN (Nicotinamide Mononucleotide, Liposomal)</h3>
+              <p class="pill">NAD+ Precursor</p>
+              <p class="muted">Regular price: $64.95</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://renuebyscience.com/products/lipo-nmn-powdered-liposomal-nmn2/?rfsn=8991232.81cd3a&utm_source=refersion&utm_medium=affiliate&utm_campaign=8991232.81cd3a">Get NMN</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">3) ML Naturals L-Taurine 1000mg (360 Capsules)</h3>
+              <p><strong>I take:</strong> twice daily (Morning, Afternoon)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4kN1dcd">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">4) Nutricost R-Alpha Lipoic Acid 100mg (120 Capsules)</h3>
+              <p class="muted">Veggie Capsules, Non-GMO, Gluten Free</p>
+              <p><strong>I take:</strong> twice daily (Morning, Afternoon)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4bNGjaq">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">5) Apigenin Capsules 50mg (60 Count)</h3>
+              <p class="muted">$11.69</p>
+              <p><strong>I take:</strong> twice daily (Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://www.amazon.com/Apigenin-Supplement-Cognition-Relaxation-Supplements/dp/B0BHFGDXBL?pd_rd_w=vyf4f&content-id=amzn1.sym.d958a0a6-9ed1-40e3-88e6-bc1d28ae6f6e&pf_rd_p=d958a0a6-9ed1-40e3-88e6-bc1d28ae6f6e&pf_rd_r=Y5K51P4SPPSFPGW465HG&pd_rd_wg=JtPTt&pd_rd_r=4732bb4f-7f2b-476d-8771-d013783801a5&pd_rd_i=B0BHFGDXBL&ref_=pd_bap_d_grid_rp_hxwhrp_sspa_dk_bia_0_14_t&th=1">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">6) Nutricost Ubiquinol Softgels (120 Softgels | 100 mg)</h3>
+              <p class="muted">Active form of CoQ10</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4c61Fjt">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">7) Nature Made Vitamin B12 1000 mcg (160 Tablets)</h3>
+              <p class="muted">$10.65</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4kwIPUE">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">8) Puritan's Pride Lutein 20mg + Zeaxanthin (2 Pack)</h3>
+              <p class="muted">$29.50</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4bNltYG">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">9) Force Factor Lion’s Mane (60 Capsules)</h3>
+              <p class="muted">$8.99</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/3MohLua">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">10) Swanson Bacopa Bacognize 250mg (2 Pack)</h3>
+              <p class="muted">$22.99</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4raG7a1">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">11) Nutricost Astaxanthin 4mg (120 Softgels)</h3>
+              <p class="muted">$17.95</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/3O95DOf">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">12) Nutricost Huperzine A 200mcg (240 Capsules)</h3>
+              <p class="muted">$19.95</p>
+              <p><strong>I take:</strong> once daily (Afternoon)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4kwJyoQ">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">13) 7,8-DHF 25mg (90 Capsules)</h3>
+              <p class="muted">$19.99</p>
+              <p><strong>I take:</strong> three times daily (Morning, Afternoon, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4aoGNBn">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">14) NOW Resveratrol 200mg (120 Capsules)</h3>
+              <p class="muted">$22.34</p>
+              <p><strong>I take:</strong> twice daily (Morning, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4qsDX4k">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">15) Freeda Niacinamide (B3) 250mg (No Flush)</h3>
+              <p class="muted">$38.65</p>
+              <p><strong>I take:</strong> twice daily (Morning, Night)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/46xZ5Pn">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">16) Mother Earth Minerals Cobalt (8 Ounce)</h3>
+<p><strong>My Notes:</strong><br>
+I Take ONCE per day in the Morning. Just 1 Drop from an eye dropper you buy an that comes with product. 
+I bought a 1oz bottle I re-fill and one drop from that eye dropper! Too much of this and it will cause 
+Optic Neurites – Yu can go more BLIND carefull do not drink this like Pepsi. Like I did in my testing 
+more blind is NOT what I want!</p>
+
+              <p class="muted">$24.95</p>
+              <p><strong>I take:</strong> once per day (Morning) – 1 drop</p>
+              <p class="warn">Your note: too much can cause optic neuritis and worsen vision. Be careful.</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4aaFc3b">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">17) Red Light Therapy Panel (660nm + 850nm)</h3>
+<p><strong>How I Use It</strong><br>
+After each vitamin treatment I hold the panel 3” in front of my face for 3 minutes.
+Hold the panel 3 inches in front of your face and just stare at it for 3 minutes after 
+each dose of vitamins so three times per day.</p>
+
+<p>Red light therapy can cause your ETC in the Mitochondria to work harder and faster 
+and that could create more reactive oxygen species (ROS). With the antioxidants in 
+my stack that is not a problem for me.</p>
+
+              <p class="muted">Hold 3 inches in front of face, stare 3 minutes after each dose (3x/day)</p>
+              <div class="btn-row">
+                <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4qy3ysp">Option 1</a>
+                <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4r4HqqR">Option 2</a>
+                <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/3Zu84xi">Option 3</a>
+              </div>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">18) Organic Spirulina + Chlorella (1000 Tablets)</h3>
+              <p class="muted">$49.99</p>
+              <p><strong>I take:</strong> 5 tablets with vitamins, 3x daily</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/4qu4QF6">Get on Amazon</a>
+            </article>
+<article class="supp-card">
+              <h3 class="h3">19) Cognizin (Citicoline) 250mg (30 Capsules)</h3>
+              <p class="muted">$13.99</p>
+              <p><strong>I take:</strong> once daily (Morning)</p>
+              <a class="btn" target="_blank" rel="noopener" href="https://amzn.to/3Zu7v6G">Get on Amazon</a>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

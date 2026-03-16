@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>healLHON.com - Home</title>
+    <link rel="stylesheet" href="styles_v10.css?v=21" />
+  </head>
+
+  <body>
+    <!-- FIXED HEADER (same on every page) -->
+    <header class="fixed-header" role="banner">
+  <div class="header-grid">
+    <div class="header-left-controls">
+      <div class="visit-counter" aria-label="Site visits counter">
+        <div class="visit-counter-label">Visits</div>
+        <div class="visit-counter-number">420</div>
+      </div>
+
+      <div class="text-size-control">
+        <label for="textSizeSelect" class="text-size-label">Text Size</label>
+        <select id="textSizeSelect" class="text-size-select" aria-label="Select text size for the whole site">
+          <option value="normal">Normal</option>
+          <option value="large">Large</option>
+          <option value="xlarge">Extra Large</option>
+          <option value="huge">Huge</option>
+          <option value="maximum">Maximum</option>
+        </select>
+      </div>
+    </div>
+<!-- LEFT LOGO -->
+    <a class="logo-link" href="index.html?play=lhon" data-play="lhon" aria-label="Go to home and play LHON">
+      <img class="logo" src="Images/800 LHON TRANSPARENT BACKGROUND.png" alt="LHON logo" />
+    </a>
+
+    <!-- CENTER TITLE -->
+    <a class="center-title" href="index.html" aria-label="Go to home">healLHON.com</a>
+
+    <!-- RIGHT CLUSTER: LHON+ + TOGGLE + LANGUAGE PLACEHOLDER -->
+
+
+    <div class="header-right">
+
+
+      <a class="logo-link" href="index.html?play=lhonplus" data-play="lhonplus" aria-label="Go to home and play LHON Plus">
+
+
+        <img class="logo" src="Images/LHON+ TRANSPARENT BACKGROUND.png" alt="LHON Plus logo" />
+
+
+      </a>
+
+
+
+      <div class="header-right-controls">
+
+
+        <!-- Toggle: I can see / I am blind -->
+
+
+        <div class="vision-toggle" role="group" aria-label="Vision mode toggle">
+
+
+          <span class="toggle-label" id="labelSee">I can see</span>
+
+
+          <button id="visionToggle" class="toggle-btn" type="button" role="switch" aria-checked="false" aria-labelledby="labelSee labelBlind">
+
+
+            <span class="toggle-knob" aria-hidden="true"></span>
+
+
+          </button>
+
+
+          <span class="toggle-label" id="labelBlind">I am blind</span>
+
+
+        </div>
+
+
+
+        <div class="language-control">
+
+
+          <label for="languageSelect" class="language-label">Language Selection</label>
+
+
+          <select id="languageSelect" class="language-select" aria-label="Language selection placeholder">
+
+
+            <option selected>Coming Soon</option>
+
+
+          </select>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+    </div>
+  </div>
+</header>
+
+    <!-- MAIN LAYOUT: left nav + content -->
+    <main class="page-grid" id="main">
+      <nav class="side-nav">
+  <a class="nav-link" href="index.html">Home</a>
+  <a class="nav-link" href="supplements.html">LHON Vision Quest 2.0 Supplements</a>
+  <a class="nav-link" href="papers.html">: LHON Vision Quest 2.0 Papers</a>
+      <a class="nav-link" href="social-lab.html">LHON Vision Quest 2.0 Social Lab</a>
+<a class="nav-link" href="lhon-symbol.html">LHON Symbol</a>
+</nav>
+
+
+      <section class="content">
+        
+
+<section class="card">
+  <h1 class="h1">Latest Video</h1>
+  <p class="muted">Newest upload from @TheGeneticHouse.</p>
+
+  <div class="video-wrap" id="latest-video-player" style="position:relative;width:100%;max-width:100%;aspect-ratio:16 / 9;border-radius:16px;overflow:hidden;background:#000;">
+    <button
+      type="button"
+      onclick="document.getElementById('latest-video-player').innerHTML = '<iframe src=&quot;https://www.youtube-nocookie.com/embed/GhDpOlIyBdQ?start=67&autoplay=1&rel=0&modestbranding=1&quot; title=&quot;Latest YouTube video&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen style=&quot;width:100%;height:100%;border:0;display:block;&quot;></iframe>';"
+      aria-label="Play latest YouTube video on this page"
+      style="all:unset;cursor:pointer;display:block;position:relative;width:100%;height:100%;"
+    >
+      <img
+        src="https://img.youtube.com/vi/GhDpOlIyBdQ/hqdefault.jpg"
+        alt="Latest YouTube video thumbnail"
+        style="display:block;width:100%;height:100%;object-fit:cover;"
+      />
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
+        <div style="width:88px;height:62px;border-radius:18px;background:#ff0000;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,0.35);">
+          <div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:24px solid white;margin-left:6px;"></div>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <p class="muted">Click the thumbnail to play the video right here on the homepage.</p>
+  <p class="muted">
+    <a href="https://www.youtube.com/watch?v=GhDpOlIyBdQ&t=67s" target="_blank" rel="noopener">YouTube backup link</a>
+  </p>
+  <p class="muted">I am not curing anything. I cannot cure Leber’s Hereditary Optic Neuropathy.</p>
+  <p class="muted">I am improving the transportation of electrons to Complex IV and supporting the mitochondria and associated systems with my LHON Vision Quest 2.0 full-stack system.</p>
+</section>
+
+
+
+        <section class="card">
+          <h2 class="h2">Heal LHON</h2>
+          <p class="lead">A patient-led vision recovery project</p>
+
+          <p>I’m not a company.</p>
+          <p>I’m not a lab.</p>
+          <p>I’m not a pharmaceutical trial.</p>
+          <p>I’m a patient.</p>
+
+          <p>
+            I lost my vision to Leber’s Hereditary Optic Neuropathy (LHON) over 20 years ago. Like many others, I was told the same thing everyone hears:
+            there is no treatment, the damage is permanent, and nothing can be done.
+          </p>
+
+          <p class="emphasis">I didn’t accept that.</p>
+        </section>
+
+        <section class="card">
+          <h2 class="h2">What I Did</h2>
+          <p>
+            I spent years researching mitochondrial biology, optic nerve energetics, oxidative stress, and real-world patient outcomes. I tested, adjusted,
+            documented, and refined what I now call my Vision Quest.
+          </p>
+          <p>This wasn’t theory.</p>
+          <p>This wasn’t hope.</p>
+          <p>This was experimentation on myself, with careful observation and accountability.</p>
+          <p class="emphasis">And my vision improved.</p>
+        </section>
+
+        <section class="card">
+          <h2 class="h2">Why “Heal LHON”</h2>
+          <p>
+            “Heal LHON” doesn’t mean I believe every case will be the same. It means I reject the idea that nothing is possible.
+          </p>
+          <p>LHON is a mitochondrial disease.</p>
+          <p>Mitochondria are about energy.</p>
+          <p>Energy systems can be supported, protected, and sometimes restored.</p>
+
+          <p>This site exists to:</p>
+          <ul class="list">
+            <li>Share what I actually did</li>
+            <li>Show what I actually take</li>
+            <li>Document what has actually changed</li>
+            <li>Give others a place to start their own thinking</li>
+          </ul>
+
+          <p class="emphasis">No hype. No miracle claims. Just real work.</p>
+        </section>
+
+        <section class="card">
+          <h2 class="h2">Who This Is For</h2>
+          <ul class="list">
+            <li>People with LHON, especially those with the 11778 mutation</li>
+            <li>Parents and family members trying to help</li>
+            <li>Anyone questioning the idea that “nothing can be done”</li>
+            <li>Anyone who believes patients deserve access to information</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="h2">What You’ll Find Here</h2>
+          <ul class="list">
+            <li>My full supplement stack (exactly what I use)</li>
+            <li>Explanations of why each item matters</li>
+            <li>Videos documenting my progress and thoughts</li>
+            <li>A growing resource built step by step, openly</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2 class="h2">A Note on Accessibility</h2>
+          <p>
+            This site was built by someone with vision loss. That’s why you’ll see an “I can see / I am blind” toggle at the top.
+            Accessibility should never be an afterthought.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

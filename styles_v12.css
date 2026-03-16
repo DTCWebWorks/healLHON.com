@@ -1,0 +1,353 @@
+:root{
+  /* I CAN SEE THEME */
+  --bg:#f7f0e3;        /* light cream */
+  --panel:#fbf5ea;     /* card cream */
+  --border:#8b6b4f;    /* medium brown */
+  --text:#000000;      /* black */
+  --muted:#3a2a1f;     /* dark brown */
+  --accent:#ff7a18;    /* brand orange */
+  --btnbg:#efe2cf;     /* warm cream button */
+  --btnborder:#8b6b4f; /* medium brown */
+  --focus:#8b6b4f;
+
+  /* BLIND MODE THEME */
+  --blind-bg:#000000;
+  --blind-panel:#0b0b0b;
+  --blind-border:#2f2f2f;
+  --blind-text:#ffffff;
+  --blind-muted:#ffe66d;
+  --blind-accent:#ffe66d;
+  --blind-focus:#ffe66d;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{background:var(--bg)}
+body{
+  margin:0;
+  font-family:Baskerville,"Baskerville Old Face","Hoefler Text",Garamond,"Times New Roman",serif;
+  font-size:14px;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+/* FIXED HEADER */
+.fixed-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  border-bottom:2px solid var(--border);
+  background:var(--bg);
+  z-index:1000;
+}
+.header-grid{
+  max-width:1200px;
+  margin:0 auto;
+  padding:14px 16px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:10px;
+}
+.logo-link{
+  display:inline-flex;
+  align-items:center;
+  border-radius:12px;
+  text-decoration:none;
+}
+.logo-link:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Base logo size (LHON) */
+.logo{
+  height:78px;
+  width:78px;
+  object-fit:contain;
+  display:block;
+}
+
+/* Right cluster: LHON+ tucked next to toggle */
+.header-right{
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+}
+
+/* v6: LHON+ is 20% larger */
+.header-right .logo{
+  height:94px;
+  width:94px;
+}
+
+.center-title{
+  justify-self:center;
+  text-decoration:none;
+  color:var(--accent);
+  font-weight:900;
+  letter-spacing:0.5px;
+  font-size:44px; /* +6pt-ish from original */
+  padding:8px 10px;
+  border-radius:12px;
+}
+.center-title:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* Toggle */
+.vision-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:2px solid var(--border);
+  background:var(--panel);
+  padding:10px 12px;
+  border-radius:999px;
+}
+.toggle-label{font-weight:800;color:var(--muted);font-size:16px}
+.toggle-btn{
+  width:66px;height:34px;
+  border-radius:999px;
+  border:2px solid var(--border);
+  background:var(--btnbg);
+  cursor:pointer;
+  position:relative;
+  padding:0;
+}
+.toggle-btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.toggle-knob{
+  position:absolute;
+  top:3px;left:3px;
+  width:28px;height:28px;
+  border-radius:999px;
+  background:var(--accent);
+  transition:transform 180ms ease;
+}
+
+/* MAIN LAYOUT */
+.page-grid{
+  max-width:1200px;
+  margin:0 auto;
+  padding:120px 16px 40px;
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:16px;
+}
+.side-nav{
+  position:sticky;
+  top:120px;
+  align-self:start;
+  border:2px solid var(--border);
+  background:var(--panel);
+  border-radius:16px;
+  padding:12px;
+}
+.nav-link{
+  display:block;
+  padding:12px 12px;
+  border-radius:12px;
+  color:var(--text);
+  text-decoration:none;
+  border:2px solid transparent;
+  font-weight:800;
+}
+.nav-link:hover{background:rgba(139,107,79,0.10)}
+.nav-link:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.nav-link.active{border-color:var(--border);background:rgba(139,107,79,0.12)}
+.content{min-width:0}
+
+/* CARDS */
+.card{
+  border:2px solid var(--border);
+  background:var(--panel);
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:16px;
+}
+.h1{margin:0 0 8px;font-size:32px}
+.h2{margin:0 0 10px;font-size:24px}
+.h3{margin:0 0 6px;font-size:18px}
+.lead{font-size:18px;font-weight:800;color:var(--muted)}
+.muted{color:var(--muted)}
+.emphasis{font-weight:900}
+
+.list{margin:10px 0 0;padding-left:18px}
+.list li{margin:6px 0}
+
+/* VIDEO */
+.video-wrap{
+  border-radius:16px;
+  overflow:hidden;
+  border:2px solid var(--border);
+  background:#000;
+}
+.video{
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  display:block;
+}
+
+/* SUPPLEMENTS */
+.supp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+  margin-top:12px;
+}
+.supp-card{
+  border:2px solid var(--border);
+  background:rgba(255,255,255,0.35);
+  border-radius:16px;
+  padding:14px;
+}
+.pill{
+  display:inline-block;
+  margin:6px 0 10px;
+  padding:4px 10px;
+  border-radius:999px;
+  border:2px solid var(--border);
+  background:rgba(139,107,79,0.10);
+  font-weight:900;
+  font-size:13px;
+}
+.warn{border-left:6px solid var(--accent);padding-left:10px;margin:10px 0 0}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:2px solid var(--btnborder);
+  background:var(--btnbg);
+  color:var(--text);
+  text-decoration:none;
+  font-weight:900;
+}
+.btn:hover{filter:brightness(1.03)}
+.btn:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+
+/* BLIND MODE OVERRIDES */
+body.blind-mode, body.blind-mode html{background:var(--blind-bg)}
+body.blind-mode{
+  background:var(--blind-bg);
+  color:var(--blind-text);
+  line-height:1.7;
+}
+body.blind-mode .fixed-header{
+  background:rgba(0,0,0,0.95);
+  border-bottom-color:var(--blind-border);
+}
+body.blind-mode .card,
+body.blind-mode .side-nav{
+  background:var(--blind-panel);
+  border-color:var(--blind-border);
+}
+body.blind-mode .muted,
+body.blind-mode .toggle-label{color:var(--blind-muted)}
+body.blind-mode .center-title{color:var(--blind-accent);font-size:46px}
+body.blind-mode .logo{height:92px;width:92px}
+body.blind-mode .header-right .logo{height:110px;width:110px}
+body.blind-mode .toggle-btn{border-color:var(--blind-border);background:#111}
+body.blind-mode .toggle-knob{background:var(--blind-accent);transform:translateX(32px)}
+body.blind-mode .nav-link{font-size:22px;padding:14px}
+body.blind-mode .h1{font-size:44px}
+body.blind-mode .h2{font-size:34px}
+body.blind-mode .h3{font-size:26px}
+body.blind-mode p,
+body.blind-mode li,
+body.blind-mode .btn{font-size:22px}
+body.blind-mode .btn{background:#111;border-color:var(--blind-border)}
+body.blind-mode .btn:focus-visible,
+body.blind-mode .logo-link:focus-visible,
+body.blind-mode .center-title:focus-visible,
+body.blind-mode .nav-link:focus-visible,
+body.blind-mode .toggle-btn:focus-visible{outline-color:var(--blind-focus)}
+
+@media(max-width:860px){
+  .header-grid{grid-template-columns:auto 1fr auto;grid-template-rows:auto auto}
+  .header-right{grid-column:1/-1;justify-self:end}
+  .page-grid{grid-template-columns:1fr}
+  .side-nav{position:relative;top:0}
+}
+
+
+
+/* v9: Blind mode text boost (~20%) */
+body.blind-mode {
+  font-size: 20px;
+}
+
+body.blind-mode p,
+body.blind-mode li,
+body.blind-mode .btn,
+body.blind-mode .nav-link {
+  font-size: 20px;
+}
+
+body.blind-mode .h1 { font-size: 52px; }
+body.blind-mode .h2 { font-size: 40px; }
+body.blind-mode .h3 { font-size: 30px; }
+
+
+
+/* v9: Blind mode buttons - bright orange with black text */
+body.blind-mode .btn {
+  background: #ff7a18;
+  color: #000000;
+  border-color: #ff7a18;
+}
+
+
+
+/* v9: I can see buttons - Amazon yellow */
+body:not(.blind-mode) .btn {
+  background: #FF9900; /* Amazon yellow */
+  color: #ffffff;
+  border-color: #FF9900;
+}
+
+
+
+body:not(.blind-mode) a.btn,
+body:not(.blind-mode) .btn {
+  background: #FF9900 !important;
+  color: #ffffff !important;
+  border-color: #FF9900 !important;
+}
+
+
+/* v11: Button refinements */
+/* I CAN SEE: Amazon yellow with BLACK text */
+body:not(.blind-mode) a.btn,
+body:not(.blind-mode) .btn {
+  background: #FF9900 !important; /* Amazon yellow */
+  color: #000000 !important;      /* black text */
+  border-color: #FF9900 !important;
+}
+
+/* I AM BLIND: bright orange with BLACK text */
+body.blind-mode a.btn,
+body.blind-mode .btn {
+  background: #ff7a18 !important;
+  color: #000000 !important;      /* black text */
+  border-color: #ff7a18 !important;
+}
+
+
+/* =============================== */
+/* v12 HARD BUTTON OVERRIDE        */
+/* =============================== */
+
+/* I CAN SEE MODE */
+body:not(.blind-mode) .btn,
+body:not(.blind-mode) a.btn {
+    background-color: #FF9900 !important;  /* Amazon Yellow */
+    color: #000000 !important;             /* BLACK text */
+    border: 2px solid #FF9900 !important;
+}
+
+/* I AM BLIND MODE */
+body.blind-mode .btn,
+body.blind-mode a.btn {
+    background-color: #ff7a18 !important;  /* Bright Orange */
+    color: #000000 !important;             /* BLACK text */
+    border: 2px solid #ff7a18 !important;
+}
