@@ -2,7 +2,7 @@ DO THIS (SUPER SIMPLE):
 
 1) Unzip this file into your healLHON folder.
 2) Make sure these folders are next to the files:
-   Images/
+   images/
    Audio/
 
 Folder should look like:
@@ -12,7 +12,7 @@ healLHON/
   supplements.html
   styles.css
   app.js
-  Images/
+  images/
     800 LHON TRANSPARENT BACKGROUND.png
     LHON+ TRANSPARENT BACKGROUND.png
   Audio/
