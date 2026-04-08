@@ -1,14 +1,14 @@
 :root{
-  /* I CAN SEE THEME */
-  --bg:#f7f0e3;        /* light cream */
-  --panel:#fbf5ea;     /* card cream */
-  --border:#8b6b4f;    /* medium brown */
-  --text:#000000;      /* black */
-  --muted:#3a2a1f;     /* dark brown */
+  /* I CAN SEE THEME — dark charcoal + orange (matches Edge reference) */
+  --bg:#0f1115;        /* dark charcoal */
+  --panel:#171a21;     /* dark card */
+  --border:#2a2f3a;    /* silver-gray border */
+  --text:#f3f4f6;      /* light text */
+  --muted:#c5c8d1;     /* muted silver */
   --accent:#ff7a18;    /* brand orange */
-  --btnbg:#efe2cf;     /* warm cream button */
-  --btnborder:#8b6b4f; /* medium brown */
-  --focus:#8b6b4f;
+  --btnbg:#232836;     /* dark button */
+  --btnborder:#343b4c; /* dark button border */
+  --focus:#7aa2ff;
 
   /* BLIND MODE THEME */
   --blind-bg:#000000;
@@ -25,7 +25,7 @@ html,body{height:100%}
 html{background:var(--bg)}
 body{
   margin:0;
-  font-family:Baskerville,"Baskerville Old Face","Hoefler Text",Garamond,"Times New Roman",serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   font-size:14px;
   background:var(--bg);
   color:var(--text);
@@ -37,7 +37,8 @@ body{
   position:fixed;
   top:0;left:0;right:0;
   border-bottom:2px solid var(--border);
-  background:var(--bg);
+  background:rgba(15,17,21,0.92);
+  backdrop-filter:blur(8px);
   z-index:1000;
 }
 .header-grid{
@@ -97,7 +98,7 @@ body{
   align-items:center;
   gap:10px;
   border:2px solid var(--border);
-  background:var(--panel);
+  background:rgba(255,255,255,0.03);
   padding:10px 12px;
   border-radius:999px;
 }
@@ -148,9 +149,9 @@ body{
   border:2px solid transparent;
   font-weight:800;
 }
-.nav-link:hover{background:rgba(139,107,79,0.10)}
+.nav-link:hover{background:rgba(255,255,255,0.04)}
 .nav-link:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
-.nav-link.active{border-color:var(--border);background:rgba(139,107,79,0.12)}
+.nav-link.active{border-color:var(--btnborder);background:rgba(255,255,255,0.05)}
 .content{min-width:0}
 
 /* CARDS */
@@ -194,7 +195,7 @@ body{
 }
 .supp-card{
   border:2px solid var(--border);
-  background:rgba(255,255,255,0.35);
+  background:rgba(255,255,255,0.02);
   border-radius:16px;
   padding:14px;
 
@@ -205,8 +206,8 @@ body{
   margin:6px 0 10px;
   padding:4px 10px;
   border-radius:999px;
-  border:2px solid var(--border);
-  background:rgba(139,107,79,0.10);
+  border:2px solid var(--btnborder);
+  background:rgba(255,255,255,0.04);
   font-weight:900;
   font-size:13px;
 }
@@ -324,10 +325,6 @@ body:not(.blind-mode) .btn {
 }
 
 
-/* v14: FORCE button text to black everywhere (both modes) */
-.btn, a.btn {
-  color: #000000 !important;
-}
 
 
 
