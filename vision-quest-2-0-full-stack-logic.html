@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>healLHON.com - Vision Quest 2.0 Full Stack Logic</title>
+    <link rel="stylesheet" href="styles_v10.css?v=50" />
+
+  <style>
+    .logic-intro {
+      border-left: 8px solid var(--accent);
+    }
+    .logic-section {
+      scroll-margin-top: 150px;
+    }
+    .logic-section p {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+    .logic-section p:last-child {
+      margin-bottom: 0;
+    }
+    .logic-toc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .logic-toc a {
+      display: block;
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--btnborder);
+      border-radius: 14px;
+      padding: 12px;
+      text-decoration: none;
+      font-weight: 900;
+    }
+    .logic-toc a:hover {
+      filter: brightness(1.08);
+    }
+    body.blind-mode .logic-section p {
+      font-size: 24px;
+      line-height: 1.8;
+    }
+  </style>
+  </head>
+
+  <body>
+    <header class="fixed-header" role="banner">
+  <div class="header-grid">
+    <div class="header-left-controls">
+      <div class="visit-counter" aria-label="Site visits counter">
+        <div class="visit-counter-label">Visits</div>
+        <div class="visit-counter-number">420</div>
+      </div>
+
+      <div class="text-size-control">
+        <label for="textSizeSelect" class="text-size-label">Text Size</label>
+        <select id="textSizeSelect" class="text-size-select" aria-label="Select text size for the whole site">
+          <option value="normal">Normal</option>
+          <option value="large">Large</option>
+          <option value="xlarge">Extra Large</option>
+          <option value="huge">Huge</option>
+          <option value="maximum">Maximum</option>
+        </select>
+      </div>
+    </div>
+<!-- LEFT LOGO -->
+    <a class="logo-link" href="index.html?play=lhon" data-play="lhon" aria-label="Go to home and play LHON">
+      <img class="logo" src="images/800 LHON TRANSPARENT BACKGROUND.png" alt="LHON logo" />
+    </a>
+
+    <!-- CENTER TITLE -->
+    <a class="center-title" href="index.html" aria-label="Go to home">healLHON.com</a>
+
+    <!-- RIGHT CLUSTER: LHON+ + TOGGLE + LANGUAGE PLACEHOLDER -->
+
+
+    <div class="header-right">
+
+
+      <a class="logo-link" href="index.html?play=lhonplus" data-play="lhonplus" aria-label="Go to home and play LHON Plus">
+
+
+        <img class="logo" src="images/LHON+ TRANSPARENT BACKGROUND.png" alt="LHON Plus logo" />
+
+
+      </a>
+
+
+
+      <div class="header-right-controls">
+
+
+        <!-- Toggle: I can see / I am blind -->
+
+
+        <div class="vision-toggle" role="group" aria-label="Vision mode toggle">
+
+
+          <span class="toggle-label" id="labelSee">I can see</span>
+
+
+          <button id="visionToggle" class="toggle-btn" type="button" role="switch" aria-checked="false" aria-labelledby="labelSee labelBlind">
+
+
+            <span class="toggle-knob" aria-hidden="true"></span>
+
+
+          </button>
+
+
+          <span class="toggle-label" id="labelBlind">I am blind</span>
+
+
+        </div>
+
+
+
+        <div class="language-control">
+
+
+          <label for="languageSelect" class="language-label">Language Selection</label>
+
+
+          <select id="languageSelect" class="language-select" aria-label="Language selection placeholder">
+
+
+            <option selected>Coming Soon</option>
+
+
+          </select>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+    </div>
+  </div>
+</header>
+
+    <main class="page-grid" id="main">
+      <nav class="side-nav">
+  <a class="nav-link" href="index.html">Home</a>
+  <a class="nav-link" href="vision-quest-2-0-full-stack-logic.html">Vision Quest 2.0 Full Stack Logic</a>
+  <a class="nav-link" href="supplements.html">LHON Vision Quest 2.0 Supplements</a>
+  <a class="nav-link" href="papers.html">LHON Vision Quest 2.0 Papers</a>
+  <a class="nav-link" href="social-lab.html">LHON Vision Quest 2.0 Social Lab</a>
+  <a class="nav-link" href="lhon-symbol.html">LHON Symbol</a>
+</nav>
+
+      <section class="content">
+        <section class="card logic-intro">
+          <h1 class="h1">Vision Quest 2.0 Full Stack Logic</h1>
+          <p class="lead">Why I take each part, how I think it connects to LHON 11778, what I know, what I do not know, and why I keep documenting it.</p>
+          <p class="muted">This page is not a cure claim, not medical proof, and not a promise. It is my honest personal research, logic, and documented experience after more than 20 years with LHON.</p>
+          <div class="logic-toc" aria-label="Vision Quest 2.0 Full Stack Logic sections">
+            <a href="#section-1">Section 1: The Big Idea</a>
+            <a href="#section-2">Section 2: This Is Not One Magic Pill</a>
+            <a href="#section-3">Section 3: The Stack Categories</a>
+            <a href="#section-4">Section 4: Why Combination Matters</a>
+            <a href="#section-5">Section 5: My Personal Results</a>
+            <a href="#section-6">Section 6: What I Do Not Know</a>
+            <a href="#section-7">Section 7: Why I Keep Sharing It</a>
+          </div>
+        </section>
+
+        <section class="card logic-section" id="section-1">
+          <h2 class="h2">Section 1: The Big Idea</h2>
+          <p>Vision Quest 2.0 is my personal full-stack system for supporting my mitochondria, optic nerve, retinal ganglion cells, and overall vision after more than 20 years with LHON.</p>
+          <p>My specific LHON mutation is 11778, which affects Complex I of the mitochondrial electron transport chain. In simple terms, that means the cells involved in vision can have problems making energy efficiently. When energy production breaks down, especially inside retinal ganglion cells, it can lead to more oxidative stress, more cellular damage, and worse visual function.</p>
+          <p>So my goal with Vision Quest 2.0 is not to take one random supplement and hope magic happens.</p>
+          <p>My goal is to support the whole system from multiple directions at the same time.</p>
+          <p>I am trying to support electron transport.</p>
+          <p>I am trying to reduce oxidative stress.</p>
+          <p>I am trying to improve mitochondrial energy production.</p>
+          <p>I am trying to protect retinal ganglion cells.</p>
+          <p>I am trying to support the optic nerve.</p>
+          <p>I am trying to give my eyes and mitochondria the best possible environment to function, repair, and keep improving.</p>
+          <p>This is why I call it a full-stack system. Each piece has a job. Some pieces support mitochondrial energy. Some support antioxidants. Some support nerve health. Some support the retina. Some support NAD+ metabolism. Some may help with signaling, repair, or cellular stress response.</p>
+          <p>I am not claiming that Vision Quest 2.0 is a cure for LHON.</p>
+          <p>I am not claiming that everyone will get the same results I have gotten.</p>
+          <p>I am saying that after years of research, testing, adjusting, documenting, and living inside this disease, my vision is not the same as it was six months ago, one year ago, or two years ago.</p>
+          <p>It has improved massively for me.</p>
+          <p>Vision Quest 2.0 is my attempt to explain the logic behind what I am doing, why I am doing it, how the pieces connect, and why I believe this full-stack approach has helped me see more, function better, and keep moving forward.</p>
+        </section>
+
+        <section class="card logic-section" id="section-2">
+          <h2 class="h2">Section 2: This Is Not One Magic Pill</h2>
+          <p>Vision Quest 2.0 is not built around the idea that one supplement, one treatment, or one simple trick is going to fix LHON by itself.</p>
+          <p>That is not how I think about this.</p>
+          <p>LHON is a mitochondrial problem. It affects energy production, oxidative stress, retinal ganglion cells, the optic nerve, and the way the visual system functions under stress. So to me, it never made sense to look for only one answer.</p>
+          <p>A single supplement may help one part of the problem.</p>
+          <p>But one part is not the whole system.</p>
+          <p>Methylene Blue may help support electron flow.</p>
+          <p>NMN may help support NAD+ and mitochondrial energy.</p>
+          <p>L-Taurine may help support retinal health and reduce oxidative stress.</p>
+          <p>R-Alpha Lipoic Acid may help with mitochondrial antioxidant support.</p>
+          <p>Apigenin may help protect NAD+ by targeting CD38.</p>
+          <p>Ubiquinol may support mitochondrial energy and electron transport.</p>
+          <p>Vitamin B12 may support nerve health.</p>
+          <p>Lutein and Zeaxanthin may support retinal protection.</p>
+          <p>Red and infrared light therapy may support mitochondrial signaling and energy function.</p>
+          <p>But the point is not that any one of these is “the cure.”</p>
+          <p>The point is that LHON creates a system-wide problem, so I am using a system-wide approach.</p>
+          <p>That is why I call it a full stack.</p>
+          <p>If one part supports electron transport, another part supports NAD+, another part supports antioxidant cleanup, another part supports the retina, another part supports the optic nerve, and another part supports mitochondrial signaling, then the full system may create a better environment for vision to function and improve.</p>
+          <p>That is the logic.</p>
+          <p>Not magic.</p>
+          <p>Not a miracle claim.</p>
+          <p>Not “take this one thing and your vision comes back.”</p>
+          <p>Vision Quest 2.0 is about stacking support in the places where LHON creates stress.</p>
+          <p>I have spent years researching, testing, adjusting, and documenting this because I did not want a random pile of supplements. I wanted each piece to have a reason.</p>
+          <p>Some pieces may be more important than others.</p>
+          <p>Some may work better together.</p>
+          <p>Some may support the conditions that allow other parts of the stack to work better.</p>
+          <p>That is why I do not think of this as a supplement list.</p>
+          <p>I think of it as a connected system.</p>
+          <p>And for me personally, that connected system has worked better than anything else I have tried in more than 20 years of living with LHON.</p>
+        </section>
+
+        <section class="card logic-section" id="section-3">
+          <h2 class="h2">Section 3: The Stack Categories</h2>
+          <p>Vision Quest 2.0 has a lot of pieces, but I do not think of them as random supplements thrown together.</p>
+          <p>I think of them by category.</p>
+          <p>Each category has a job.</p>
+          <p>Each job connects back to LHON, mitochondrial health, retinal ganglion cells, the optic nerve, energy production, oxidative stress, or brain and nerve support.</p>
+          <p>The first category is electron transport support.</p>
+          <p>This is where Methylene Blue, Ubiquinol, and some of the mitochondrial logic behind the stack comes in. With LHON 11778, the problem is connected to Complex I of the mitochondrial electron transport chain. My goal is to support better electron movement through the system and help reduce the damage that can happen when energy production is not working properly.</p>
+          <p>The second category is NAD+ and mitochondrial energy support.</p>
+          <p>This is where NMN, Apigenin, Niacinamide / Nicotinamide, and related support come in. NAD+ is important for energy production and mitochondrial function. My goal here is to support the fuel and signaling systems that mitochondria need to work better, especially when LHON is already making energy production harder.</p>
+          <p>The third category is antioxidant and oxidative stress support.</p>
+          <p>This is where L-Taurine, R-Alpha Lipoic Acid, Astaxanthin, Spirulina, Chlorella, and other antioxidant-supporting pieces come in. LHON can create oxidative stress, and oxidative stress can damage retinal ganglion cells and other sensitive cells involved in vision. My goal here is to help reduce that stress and support the body’s ability to clean up damage.</p>
+          <p>The fourth category is retina and optic nerve support.</p>
+          <p>This is where Lutein + Zeaxanthin, Vitamin B12, L-Taurine, Cognizin / CDP Citicoline, and other nerve-supporting pieces fit. LHON affects the optic nerve and retinal ganglion cells, so this part of the stack is focused on supporting the actual visual system, not just general health.</p>
+          <p>The fifth category is brain, nerve, and neuroplasticity support.</p>
+          <p>This is where Lion’s Mane, Bacopa Monnieri, Huperzine A, 7,8-DHF, Cognizin / CDP Citicoline, Vitamin B12, and related pieces come in. Vision is not only about the eyes. The brain, optic nerve, and nervous system all have to communicate.</p>
+          <p>My goal here is to support nerve signaling, brain function, learning, adaptation, and the possibility that the visual system can become more useful over time.</p>
+          <p>The sixth category is light and mitochondrial signaling support.</p>
+          <p>This is where Red / Infrared Light Therapy fits. I do not think of red light as a magic cure by itself. I think of it as one more piece of the full-stack system. Red and infrared light may support mitochondrial activity and cellular signaling, but I believe it makes the most sense when the body is already being supported with the rest of the stack.</p>
+          <p>The seventh category is trace mineral and cellular support.</p>
+          <p>This is where Cobalt fits into my personal system. I include it because of its connection to B12 biology and cellular function, but like everything else in Vision Quest 2.0, it is one part of a larger system, not a standalone answer.</p>
+          <p>That is how I organize Vision Quest 2.0 in my head.</p>
+          <p>Not as a bottle collection.</p>
+          <p>Not as a random supplement routine.</p>
+          <p>A full-stack system with categories, jobs, and reasons.</p>
+          <p>Each piece is there because I believe it may support one or more parts of the LHON problem. The more I researched and tested, the more I started to see the stack as a connected system instead of separate ingredients.</p>
+          <p>That connected system is what Vision Quest 2.0 means to me.</p>
+        </section>
+
+        <section class="card logic-section" id="section-4">
+          <h2 class="h2">Section 4: Why Combination Matters</h2>
+          <p>The reason combination matters is because LHON does not affect only one tiny thing in isolation.</p>
+          <p>LHON affects a system.</p>
+          <p>With the 11778 mutation, the main problem is connected to Complex I of the mitochondrial electron transport chain. That means energy production can become inefficient. When energy production becomes inefficient, electrons may not move through the system the way they should. That can lead to more oxidative stress, more reactive oxygen species, more mitochondrial dysfunction, and more stress on retinal ganglion cells and the optic nerve.</p>
+          <p>So if the problem is connected to energy, oxidative stress, mitochondrial function, nerve health, retinal support, and cellular stress response, then my approach is to support all of those areas together.</p>
+          <p>That is why I do not look at Vision Quest 2.0 as one thing doing all the work.</p>
+          <p>I look at it as many pieces helping create better conditions.</p>
+          <p>For example, if Methylene Blue may help support electron movement, that is important.</p>
+          <p>But electron support by itself does not mean the whole system is supported.</p>
+          <p>The mitochondria still need NAD+ support.</p>
+          <p>The cells still need antioxidant support.</p>
+          <p>The retina still needs protection.</p>
+          <p>The optic nerve still needs support.</p>
+          <p>The brain still needs to process and adapt to visual information.</p>
+          <p>The system still needs time, consistency, and the right conditions.</p>
+          <p>That is where the full-stack logic comes in.</p>
+          <p>One part may help support electron transport.</p>
+          <p>One part may help support NAD+ and mitochondrial energy.</p>
+          <p>One part may help reduce oxidative stress.</p>
+          <p>One part may help protect retinal cells.</p>
+          <p>One part may help support nerve signaling.</p>
+          <p>One part may help support brain function and adaptation.</p>
+          <p>One part may help support mitochondrial signaling through red and infrared light therapy.</p>
+          <p>To me, the combination matters because the body is not a single switch.</p>
+          <p>It is a network.</p>
+          <p>If LHON creates a traffic jam in mitochondrial energy production, then I do not want to only push harder on the traffic jam. I want to support alternate routes, reduce the damage from the backup, protect the most vulnerable cells, and give the whole system better conditions to work.</p>
+          <p>That is the heart of Vision Quest 2.0.</p>
+          <p>It is not only about getting electrons moving.</p>
+          <p>It is also about reducing the damage caused when electrons are not moving correctly.</p>
+          <p>It is not only about supporting mitochondria.</p>
+          <p>It is also about supporting the retinal ganglion cells that depend on those mitochondria.</p>
+          <p>It is not only about the eye.</p>
+          <p>It is also about the optic nerve, the brain, and the way the nervous system learns to use whatever visual signal is available.</p>
+          <p>That is why I believe the combination has mattered so much for me.</p>
+          <p>When I look at my improvement over time, I do not think one single piece explains everything. I think the full-stack system created better conditions inside my body for my vision to improve slowly, steadily, and noticeably.</p>
+          <p>This is also why consistency matters.</p>
+          <p>Taking something once or twice is not the same as supporting the system every day.</p>
+          <p>Vision Quest 2.0 has been built through research, self-testing, adjustment, patience, and documentation. The improvements did not happen all at once. They built over time.</p>
+          <p>That makes sense to me because mitochondria, nerves, retinal ganglion cells, and the visual system are not instant systems.</p>
+          <p>They are living systems.</p>
+          <p>They need support.</p>
+          <p>They need time.</p>
+          <p>They need less damage.</p>
+          <p>They need better energy.</p>
+          <p>They need the right environment.</p>
+          <p>That is why combination matters.</p>
+          <p>Vision Quest 2.0 is not a random pile of supplements.</p>
+          <p>It is a connected strategy designed to support the LHON problem from multiple directions at the same time.</p>
+        </section>
+
+        <section class="card logic-section" id="section-5">
+          <h2 class="h2">Section 5: My Personal Results</h2>
+          <p>I want to be very clear about my results.</p>
+          <p>I have not gotten all of my vision back.</p>
+          <p>I am still legally blind.</p>
+          <p>I am not claiming that Vision Quest 2.0 cured my LHON.</p>
+          <p>But I am also not going to pretend that nothing has happened.</p>
+          <p>Something has happened.</p>
+          <p>My vision is not the same as it was six months ago.</p>
+          <p>My vision is not the same as it was one year ago.</p>
+          <p>My vision is not the same as it was two years ago.</p>
+          <p>Not even close.</p>
+          <p>After more than 20 years with LHON, I started noticing real changes. Not just numbers on a chart. Not just wishful thinking. Real-life vision changes.</p>
+          <p>I started seeing more detail.</p>
+          <p>I started noticing things I could not notice before.</p>
+          <p>My left eye, which had been mostly useless for many years, started becoming more useful.</p>
+          <p>I started seeing more contrast, more shape, more function, and more visual information in everyday life.</p>
+          <p>One of the clearest examples for me is looking in the mirror and being able to see my tongue and teeth. That might sound small to someone with normal vision, but after living with LHON for more than 20 years, that is not small to me.</p>
+          <p>That is massive.</p>
+          <p>That is real-world visual function.</p>
+          <p>That is the kind of thing that tells me something is changing.</p>
+          <p>For years, the message around LHON has basically been that the damage is done, the optic nerve fibers are dead, and there is not much you can do. I lived under that idea for a long time.</p>
+          <p>But my personal experience does not match that hopeless version of the story anymore.</p>
+          <p>I am not saying everyone will get the same results.</p>
+          <p>I am not saying my results prove everything scientifically.</p>
+          <p>I am saying that in my own body, with my own LHON 11778 mutation, after years of building and refining Vision Quest 2.0, I have seen massive improvement.</p>
+          <p>That matters.</p>
+          <p>It matters because I have been documenting my LHON journey on YouTube for almost 15 years.</p>
+          <p>It matters because this is not a random one-day update.</p>
+          <p>It matters because I have been living with this disease for more than two decades, and I know what my vision used to be like.</p>
+          <p>I know what I could not see.</p>
+          <p>I know what changed.</p>
+          <p>I know what I can see now that I could not see before.</p>
+          <p>Vision Quest 2.0 has not made me normal sighted.</p>
+          <p>It has not erased LHON.</p>
+          <p>It has not made everything easy.</p>
+          <p>But it has helped me see more.</p>
+          <p>It has helped me function better.</p>
+          <p>It has helped me believe that improvement is possible, even after many years.</p>
+          <p>And that is why I keep documenting it.</p>
+          <p>Because someone else with LHON deserves to know that my story did not stop at “there is no treatment.”</p>
+          <p>My story kept going.</p>
+          <p>And my vision kept changing.</p>
+        </section>
+
+        <section class="card logic-section" id="section-6">
+          <h2 class="h2">Section 6: What I Do Not Know</h2>
+          <p>There are things I know from my own experience.</p>
+          <p>There are things I believe based on my research.</p>
+          <p>And there are things I still do not know.</p>
+          <p>That is important to say clearly.</p>
+          <p>I do not know if Vision Quest 2.0 will work for everyone with LHON.</p>
+          <p>I do not know if every person with the 11778 mutation would respond the way I have responded.</p>
+          <p>I do not know how much each individual supplement is contributing by itself.</p>
+          <p>I do not know if the same system would work the same way for 3460, 14484, or other LHON mutations.</p>
+          <p>I do not know which parts of my improvement are from electron transport support, NAD+ support, antioxidant support, retinal support, optic nerve support, red and infrared light therapy, neuroplasticity support, or the combination of everything together.</p>
+          <p>I do not know the full scientific answer.</p>
+          <p>But I do know my own life.</p>
+          <p>I know what my vision was like before.</p>
+          <p>I know what it is like now.</p>
+          <p>I know that my vision has changed in ways that are real to me, functional to me, and noticeable in everyday life.</p>
+          <p>That does not mean I can promise the same thing to someone else.</p>
+          <p>I cannot.</p>
+          <p>Vision Quest 2.0 is my personal system.</p>
+          <p>It is built from research, self-testing, trial and error, risk, consistency, and documentation.</p>
+          <p>It is not a clinical trial.</p>
+          <p>It is not medical proof.</p>
+          <p>It is not a cure claim.</p>
+          <p>It is not a guarantee.</p>
+          <p>But it is also not nothing.</p>
+          <p>It is my documented experience after living with LHON for more than 20 years and spending years trying to understand how to support the mitochondrial problem behind my vision loss.</p>
+          <p>I think honesty matters.</p>
+          <p>If something is based on research, I want to explain the research logic.</p>
+          <p>If something is based on my personal experience, I want to say that clearly.</p>
+          <p>If something is uncertain, I want to admit that.</p>
+          <p>I do not want to lie.</p>
+          <p>I do not want to exaggerate.</p>
+          <p>I do not want to give false hope.</p>
+          <p>But I also do not want to hide real hope just because it does not fit neatly into the medical system yet.</p>
+          <p>That is the balance I am trying to hold.</p>
+          <p>Vision Quest 2.0 is not me saying, “I solved LHON for everyone.”</p>
+          <p>Vision Quest 2.0 is me saying, “This is what I have done, this is why I did it, this is how I think it connects, and this is what has happened to me.”</p>
+          <p>That is the truth.</p>
+          <p>And for me, the truth is that my vision has improved massively, even if I do not know every scientific detail of why.</p>
+        </section>
+
+        <section class="card logic-section" id="section-7">
+          <h2 class="h2">Section 7: Why I Keep Sharing It</h2>
+          <p>I keep sharing Vision Quest 2.0 because I remember what it felt like to go blind from LHON and have basically no real answers.</p>
+          <p>When I first lost my vision, everyone around me was trying to stay hopeful. My mom and my family were told this was rare, there was not much information, and science would probably have something figured out within 10 years.</p>
+          <p>I believed that.</p>
+          <p>I needed to believe that.</p>
+          <p>But then 10 years went by.</p>
+          <p>Then 15.</p>
+          <p>Then 20.</p>
+          <p>And I was still sitting there blind, trying to figure out how to live a life that never really worked right for me.</p>
+          <p>That is the part people do not always understand. Some people with LHON adapt really well. They build their blind life, get their systems in place, get their job, their family, their routine, and they keep going. I respect that.</p>
+          <p>But that was not my path.</p>
+          <p>I tried living blind for decades. I tried making it work. I tried pushing through it. Then more health problems came in, including MS, and everything got harder. So for me, getting vision back was not just a fun idea or a little science project.</p>
+          <p>I needed vision back.</p>
+          <p>I needed more function.</p>
+          <p>I needed more capability.</p>
+          <p>I needed some part of my body to start giving me something back instead of taking more away.</p>
+          <p>That is why I kept researching.</p>
+          <p>That is why I kept testing things on myself.</p>
+          <p>That is why I kept changing the stack, learning about mitochondria, trying to understand Complex I, NAD+, oxidative stress, electron transport, retinal ganglion cells, and all the little pieces that might matter.</p>
+          <p>And now something has happened.</p>
+          <p>My vision has improved.</p>
+          <p>Not all the way.</p>
+          <p>Not perfectly.</p>
+          <p>Not magically.</p>
+          <p>But massively for me.</p>
+          <p>So I am not going to keep that quiet.</p>
+          <p>I am not going to sit here with 15 years of YouTube videos, more than 20 years of LHON experience, years of Vision Quest 2.0 testing, and real personal improvement, and then act like it does not matter.</p>
+          <p>It does matter.</p>
+          <p>Maybe not everyone will do what I did.</p>
+          <p>Maybe some people will just follow my story from a distance.</p>
+          <p>Maybe some people will think it is interesting but never try anything.</p>
+          <p>Maybe some people are already comfortable in their blind life and do not need this the way I needed it.</p>
+          <p>That is fine.</p>
+          <p>But for the person out there who is newly diagnosed, scared, angry, confused, or sitting there thinking “is this really it?” I want my story to be there.</p>
+          <p>For the person who has been blind for years and was told nothing could ever improve, I want my story to be there.</p>
+          <p>For the family member searching late at night because someone they love just got diagnosed with LHON, I want my story to be there.</p>
+          <p>Not as a promise.</p>
+          <p>Not as a cure.</p>
+          <p>Not as medical proof.</p>
+          <p>As a real documented journey from someone who has lived this disease for more than two decades and refused to stop learning.</p>
+          <p>That is why I keep sharing it.</p>
+          <p>Because when I found even a tiny bit of hope years ago, it changed everything for me. I remember finding information about idebenone and LHON and running around showing my family and friends because, for the first time, I felt like maybe there was something I could do.</p>
+          <p>That feeling matters.</p>
+          <p>Hope matters.</p>
+          <p>Information matters.</p>
+          <p>Real personal stories matter.</p>
+          <p>And if Vision Quest 2.0 can give someone else even one of those moments where they stop and think, “Wait, maybe I should keep learning,” then it is worth sharing.</p>
+          <p>I do not have all the answers.</p>
+          <p>I do not know how far my vision will keep improving.</p>
+          <p>I do not know who else this could help.</p>
+          <p>But I know what happened to me.</p>
+          <p>I know my vision is not what it was.</p>
+          <p>I know I am seeing more.</p>
+          <p>And I know I am going to keep documenting it honestly, because LHON took enough from me already.</p>
+          <p>I am not handing it the silence too.</p>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
