@@ -133,7 +133,7 @@ body{
 }
 .side-nav{
   position:sticky;
-  top:120px;
+  top:160px;
   align-self:start;
   border:2px solid var(--border);
   background:var(--panel);
@@ -559,7 +559,7 @@ body.text-size-maximum .center-title{ font-size:84px; }
 /* ===== Link tree scroll fix ===== */
 /* Keeps the left link tree visible, but lets it scroll when the screen is not tall enough. */
 .side-nav{
-  max-height:calc(100vh - 180px);
+  max-height:calc(100vh - 175px);
   overflow-y:auto;
   overscroll-behavior:contain;
   scrollbar-gutter:stable;
