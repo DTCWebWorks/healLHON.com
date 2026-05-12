@@ -126,29 +126,84 @@
   <p class="muted">Newest upload from @TheGeneticHouse.</p>
 
   <div class="video-wrap" id="latest-video-player" style="position:relative;width:100%;max-width:100%;aspect-ratio:16 / 9;border-radius:16px;overflow:hidden;background:#000;">
-    <button
-      type="button"
-      onclick="document.getElementById('latest-video-player').innerHTML = '<iframe src=&quot;https://www.youtube-nocookie.com/embed/GhDpOlIyBdQ?start=67&autoplay=1&rel=0&modestbranding=1&quot; title=&quot;Latest YouTube video&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; referrerpolicy=&quot;strict-origin-when-cross-origin&quot; allowfullscreen style=&quot;width:100%;height:100%;border:0;display:block;&quot;></iframe>';"
-      aria-label="Play latest YouTube video on this page"
-      style="all:unset;cursor:pointer;display:block;position:relative;width:100%;height:100%;"
-    >
-      <img
-        src="https://img.youtube.com/vi/GhDpOlIyBdQ/hqdefault.jpg"
-        alt="Latest YouTube video thumbnail"
-        style="display:block;width:100%;height:100%;object-fit:cover;"
-      />
-      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">
-        <div style="width:88px;height:62px;border-radius:18px;background:#ff0000;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,0.35);">
-          <div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:24px solid white;margin-left:6px;"></div>
-        </div>
-      </div>
-    </button>
+    <div id="vid-loading" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;color:#aaa;font-size:16px;">Loading latest video…</div>
   </div>
 
-  <p class="muted">Click the thumbnail to play the video right here on the homepage.</p>
-  <p class="muted">
-    <a href="https://www.youtube.com/watch?v=GhDpOlIyBdQ&t=67s" target="_blank" rel="noopener">YouTube backup link</a>
-  </p>
+  <p class="muted">Click the thumbnail to watch on YouTube.</p>
+  <p class="muted" id="vid-backup"></p>
+
+  <script>
+  (function(){
+    var CHANNEL  = 'UCeFCG1DDUVqLeoTratXWk3w';
+    var FALLBACK = 'GhDpOlIyBdQ';
+    var RSS_URL  = 'https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL;
+
+    function showPlayer(id, title) {
+      title = (title || 'Latest video').replace(/"/g, '&quot;');
+      var wrap = document.getElementById('latest-video-player');
+      var backup = document.getElementById('vid-backup');
+      var ytUrl = 'https://www.youtube.com/watch?v=' + id;
+      wrap.innerHTML =
+        '<a href="' + ytUrl + '" target="_blank" rel="noopener"' +
+        ' aria-label="Watch on YouTube: ' + title + '"' +
+        ' style="display:block;position:relative;width:100%;height:100%;">' +
+        '<img src="https://img.youtube.com/vi/' + id + '/hqdefault.jpg" alt="' + title + '" style="display:block;width:100%;height:100%;object-fit:cover;">' +
+        '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);">' +
+        '<div style="width:88px;height:62px;border-radius:18px;background:#ff0000;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,0.35);">' +
+        '<div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:24px solid white;margin-left:6px;"></div>' +
+        '</div></div></a>';
+      if (backup) backup.innerHTML = '<a href="' + ytUrl + '" target="_blank" rel="noopener">Watch on YouTube →</a>';
+    }
+
+    function parseId(xml) {
+      /* yt:videoId tag */
+      var tags = xml.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015','videoId');
+      if (tags.length) return tags[0].textContent.trim();
+      /* fallback: pull from <id>yt:video:XXXX</id> */
+      var ids = xml.getElementsByTagName('id');
+      for (var i = 0; i < ids.length; i++) {
+        var m = ids[i].textContent.match(/video:([A-Za-z0-9_-]{11})/);
+        if (m) return m[1];
+      }
+      return null;
+    }
+
+    function parseTitle(xml) {
+      var entries = xml.getElementsByTagName('entry');
+      if (entries.length) {
+        var t = entries[0].getElementsByTagName('title')[0];
+        return t ? t.textContent : '';
+      }
+      return '';
+    }
+
+    /* Try direct RSS first (works if browser doesn't block CORS on XML feeds) */
+    fetch(RSS_URL)
+      .then(function(r){ return r.text(); })
+      .then(function(text){
+        var xml = new DOMParser().parseFromString(text,'text/xml');
+        var id = parseId(xml);
+        if (!id) throw new Error('no id');
+        showPlayer(id, parseTitle(xml));
+      })
+      .catch(function(){
+        /* CORS blocked — use rss2json which is free and reliable */
+        return fetch('https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(RSS_URL))
+          .then(function(r){ return r.json(); })
+          .then(function(d){
+            if (!d.items || !d.items.length) throw new Error('empty');
+            var link = d.items[0].link || '';
+            var m = link.match(/v=([A-Za-z0-9_-]{11})/);
+            if (!m) throw new Error('no match');
+            showPlayer(m[1], d.items[0].title);
+          });
+      })
+      .catch(function(){
+        /* Both failed — show fallback video so page never breaks */
+        showPlayer(FALLBACK, 'Latest YouTube video');
+      });
+  })();
+  </script>
   <p class="muted">I am not curing anything. I cannot cure Leber’s Hereditary Optic Neuropathy.</p>
   <p class="muted">I am improving the transportation of electrons to Complex IV and supporting the mitochondria and associated systems with my LHON Vision Quest 2.0 full-stack system.</p>
 </section>
